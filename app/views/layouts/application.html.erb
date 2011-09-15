@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ZikvaBdd</title>
+  <title><%= title%></title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+	<% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :class=>"field_with_#{name}", :id => "flash_#{name}" if msg.is_a?(String) %>
+    <% end %>
+	<%= yield %>
+	<%= debug(params) if Rails.env.development? %>
 </body>
 </html>

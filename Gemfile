@@ -6,19 +6,28 @@ gem 'rails', '3.0.10'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'jquery-rails', '>= 1.0.12'
+gem 'devise'
+gem 'omniauth','>= 0.2.6'
 
-group :development do
-  gem 'rspec-rails', '2.6.1'
-end
+gem 'annotate', :group => :development
 
-group :test do
-  gem 'rspec-rails', '2.6.1'
+gem 'rspec-rails', :group => [:development,:test]
+gem 'database_cleaner', :group => :test
+gem 'factory_girl_rails', :group => :test
+
+group :cucumber do
   gem 'webrat', '0.7.1'
+  #gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
   # gem 'autotest', '4.4.6'
   # gem 'autotest-rails-pure', '4.1.2'
   # gem 'autotest-fsevent', '0.2.4'
   # gem 'autotest-growl', '0.2.9'
 end
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

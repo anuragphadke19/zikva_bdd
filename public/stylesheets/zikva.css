@@ -1,0 +1,4 @@
+/* CSS for flash - notice, error & alert*/
+.field_with_notice  {border:1px dashed green!important;background:#DDF1C8!important}
+.field_with_error,.field_with_alert
+                    {border:1px dashed #eb340a!important;background:#faebe7!important}
