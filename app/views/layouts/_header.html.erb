@@ -1,0 +1,12 @@
+<div id ="header">
+  <div class="menu-bar">
+    <ul class="menu">
+   	  <li class="nav-menu"><%= link_to "Home", root_path %></li>
+      <li class="last nav-menu"><%= link_to "Sign up", new_user_registration_path %>&nbsp;/&nbsp;<%= link_to "Sign in", new_user_session_path %></li>
+    </ul>
+  </div>
+  <div class="logo-holder">
+    <%= link_to image_tag("/images/logo.png", :alt => "Zikva"), root_path %>
+  </div>
+</div>
+

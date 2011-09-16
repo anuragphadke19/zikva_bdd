@@ -2,3 +2,64 @@
 .field_with_notice  {border:1px dashed green!important;background:#DDF1C8!important}
 .field_with_error,.field_with_alert
                     {border:1px dashed #eb340a!important;background:#faebe7!important}
+
+/*CSS for application layout*/
+#wrapper	{
+	width:960px;
+	-moz-border-radius:10px;margin:0 auto
+}
+.main-container{
+	background: #fff;
+	padding:10px;
+    border-radius: 4px 4px;
+    border-radius: 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 4px;
+    -webkit-border-radius: 4px;
+	min-height: 400px;
+}
+/*Header & Footer Menu Bar*/
+#footer{
+  position:relative;
+  background-color: #DBD9D9;
+
+}
+#header{
+    position:relative
+}
+#header .menu-bar{
+    width:100%;
+	height:30px;
+}
+
+#header .menu-bar .menu{
+    background: #F4F4F4;
+    float: right;
+    margin: 0 0 10px 0;
+    height: 25px;
+    font: normal 11px "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Helvetica, "Helvetica Neue", Arial, Verdana, Tahoma;
+    border-bottom-left-radius: 4px 4px;
+    border-bottom-right-radius: 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+
+}
+
+#header .menu-bar .menu li.nav-menu{
+    float:left;
+    overflow:hidden;
+    padding:5px 10px 5px 10px
+}
+#header .menu-bar .menu li.nav-menu, #header .menu-bar .menu li.nav-menu a{
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    color:#222;
+    vertical-align:top;
+}
+
+#header .menu-bar .menu li.nav-menu span{
+    margin-left:1px;
+    padding: 3px;
+    color:#DE3A00;
+    vertical-align:top;
+}

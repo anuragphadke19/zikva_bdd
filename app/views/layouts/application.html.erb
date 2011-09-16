@@ -7,10 +7,18 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :class=>"field_with_#{name}", :id => "flash_#{name}" if msg.is_a?(String) %>
-    <% end %>
-	<%= yield %>
-	<%= debug(params) if Rails.env.development? %>
+	<div id="wrapper" class="wrapper">
+        <%= render 'layouts/header'%>
+        <div class="main-container">
+            <%- if controller_name != 'sessions' %>
+				<% flash.each do |name, msg| %>
+	              <%= content_tag :div, msg, :class=>"field_with_#{name}", :id => "flash_#{name}" if msg.is_a?(String) %>
+	            <% end %>
+            <% end -%>
+            <%= yield %>
+        </div>
+        <%= render 'layouts/footer'%>
+        <%= debug(params) if Rails.env.development? %>
+    </div>
 </body>
 </html>

@@ -57,5 +57,18 @@ describe PagesController do
                         :content => "#{@base_title} | Help")
     end
   end
+  
+  describe "GET 'tc'" do
+    it "should be successful" do
+      get 'tc'
+      response.should be_success
+    end
+    
+    it "should have the right title" do
+      get 'tc'
+      response.should have_selector("title",
+                        :content => "#{@base_title} | Terms & Conditions")
+    end
+  end
 
 end

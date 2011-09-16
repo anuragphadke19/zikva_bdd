@@ -1,13 +1,18 @@
 ZikvaBdd::Application.routes.draw do
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
+    get '/signin', :to => "devise/sessions#new"
+    get '/signup', :to => "devise/registrations#new"
+  end
 
-  get "pages/home"
+  match '/home', :to => "pages#home"
 
-  get "pages/contact"
+  match '/contact', :to => "pages#contact"
 
-  get "pages/about"
+  match '/about', :to => "pages#about"
   
-  get "pages/help"
+  match '/help', :to => "pages#help"
+  
+  match '/tc', :to => "pages#tc"
   
   root :to => "pages#home"
 
